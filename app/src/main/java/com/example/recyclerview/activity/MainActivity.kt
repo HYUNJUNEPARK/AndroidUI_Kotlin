@@ -2,9 +2,7 @@ package com.example.recyclerview.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.recyclerview.adapter.MainAdapter
 import com.example.recyclerview.databinding.ActivityMainBinding
 import com.example.recyclerview.model.Data
