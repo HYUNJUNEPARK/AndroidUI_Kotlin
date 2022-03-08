@@ -3,9 +3,9 @@ package com.example.recyclerview.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.recyclerview.adapter.MainAdapter
+import com.example.recyclerview.adapter.MyAdapter
 import com.example.recyclerview.databinding.ActivityMainBinding
-import com.example.recyclerview.model.Data
+import com.example.recyclerview.model.MyData
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
@@ -14,25 +14,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        initView()
+        initRecyclerView()
     }
 
-    private fun initView() {
-        val adapter = MainAdapter()
-        adapter.listData = loadData()
+    private fun initRecyclerView() {
+        val adapter = MyAdapter()
+        adapter.dataList = loadData()
         binding.recyclerView.adapter = adapter
+
         val layoutManager = LinearLayoutManager(this)
         binding.recyclerView.layoutManager = layoutManager
     }
 
-    private fun loadData() : MutableList<Data> {
-        val data:MutableList<Data> = mutableListOf()
+    private fun loadData() : MutableList<MyData> {
+        val dataList:MutableList<MyData> = mutableListOf()
         for(number in 1..100){
             val title = "Sample $number"
-            val date = System.currentTimeMillis()
-            var memo = Data(number, title, date)
-            data.add(memo)
+            val timestamp = System.currentTimeMillis()
+            var info = MyData(number, title, timestamp)
+            dataList.add(info)
         }
-        return data;
+        return dataList
     }
 }
