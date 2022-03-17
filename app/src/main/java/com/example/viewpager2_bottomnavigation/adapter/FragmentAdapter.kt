@@ -13,10 +13,7 @@ class FragmentAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(
 
     override fun createFragment(position: Int): Fragment {
         return  when(position) {
-            0 -> {
-
-                fragmentList[0]
-            }
+            0 -> fragmentList[0]
             1 -> fragmentList[1]
             else -> fragmentList[2]
         }
