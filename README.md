@@ -49,7 +49,7 @@ binding.viewPager.adapter = adapter
 ```
 <br></br>
 <br></br>
-**(4) BottomNavigationView 리스너 생성**</br>
+**(4) BottomNavigationView, ViewPager2 연결**</br>
 
 ```kotlin
 binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
@@ -71,6 +71,14 @@ binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
         }
     }
 }
+binding.viewPager.registerOnPageChangeCallback(
+    object : ViewPager2.OnPageChangeCallback() {
+        override fun onPageSelected(position: Int) {
+            super.onPageSelected(position)
+            binding.bottomNavigation.menu.getItem(position).isChecked = true
+        }
+    }
+)
 ```
 
 <br></br>
