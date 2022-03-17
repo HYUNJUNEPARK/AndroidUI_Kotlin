@@ -2,6 +2,7 @@ package com.example.viewpager2_bottomnavigation.activitiy
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager2.widget.ViewPager2
 import com.example.viewpager2_bottomnavigation.R
 import com.example.viewpager2_bottomnavigation.adapter.FragmentAdapter
 import com.example.viewpager2_bottomnavigation.databinding.ActivityMainBinding
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initFragment()
-        initBottomNaviListener()
+        initLinkBottomNaviWithViewPager2()
     }
 
     private fun initFragment() {
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         binding.viewPager.adapter = adapter
     }
 
-    private fun initBottomNaviListener() {
+    private fun initLinkBottomNaviWithViewPager2() {
         binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
             when(menuItem.itemId) {
                 R.id.menuA -> {
@@ -52,5 +53,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        binding.viewPager.registerOnPageChangeCallback(
+            object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    binding.bottomNavigation.menu.getItem(position).isChecked = true
+                }
+            }
+        )
     }
 }
