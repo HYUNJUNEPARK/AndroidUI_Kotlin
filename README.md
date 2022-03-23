@@ -1,6 +1,5 @@
 # RecyclerView
 
-<img src="이미지 주소" height="400"/>
 
 ---
 1. <a href = "#content1">ViewHolder</a></br>

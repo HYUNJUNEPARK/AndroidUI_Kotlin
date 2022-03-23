@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         val adapter = MyAdapter()
         adapter.dataList = loadData()
         binding.recyclerView.adapter = adapter
-
         val layoutManager = LinearLayoutManager(this)
         binding.recyclerView.layoutManager = layoutManager
     }

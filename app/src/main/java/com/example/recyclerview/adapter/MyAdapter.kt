@@ -17,13 +17,20 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyHolder>() {
     }
 
     inner class MyHolder(private val binding: ItemMainRecyclerviewBinding) : RecyclerView.ViewHolder(binding.root) {
+        //TODO 클릭된 아이템의 세부 데이터가 필요할 때 사용
+        lateinit var _myData: MyData
+
         init {
             binding.root.setOnClickListener {
-                Toast.makeText(binding.root.context,"클릭된 아이템=${binding.textTitle.text}", Toast.LENGTH_LONG).show()
+                val number = _myData.number
+                val title = _myData.title
+                val timestamp = _myData.timestamp
+                Toast.makeText(binding.root.context,"ITEM DETAIL : $number / $title / $timestamp ", Toast.LENGTH_LONG).show()
             }
         }
-        fun setData (myData: MyData) {
-            binding.textNo.text = "${myData.no}"
+        fun setContents (myData: MyData) {
+            _myData = myData
+            binding.textNo.text = "${myData.number}"
             binding.textTitle.text = myData.title
             var sdf = SimpleDateFormat("yyyy/MM/dd")
             var formattedDate = sdf.format(myData.timestamp)
@@ -33,7 +40,7 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.MyHolder>() {
 
     override fun onBindViewHolder(myHolder: MyHolder, position: Int) {
         val data = dataList[position]
-        myHolder.setData(data)
+        myHolder.setContents(data)
     }
 
     override fun getItemCount(): Int {
