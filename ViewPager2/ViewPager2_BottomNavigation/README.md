@@ -1,6 +1,6 @@
 # 프로젝트 이름
 
-<img src="https://github.com/HYUNJUNEPARK/ImageRepository/blob/master/androidUI/ViewPager2_BottomNavigation.jpg" height="400"/>
+<img src="https://github.com/HYUNJUNEPARK/ImageRepository/blob/master/androidUI/ViewPager2_BottomNavigation2.jpg" height="400"/>
 
 ---
 1. <a href = "#content1">ViewPager2_BottomNavigation 연결 절차</a></br>
