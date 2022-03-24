@@ -36,7 +36,9 @@
 
 ><a id = "content2">**2. setSupportActionBar(툴바 세팅)**</a></br>
 
--xml 에 세팅한 툴바 setSupportActionBar 에 파라미터로 전달
+-xml 에 세팅한 툴바 setSupportActionBar 에 파라미터로 전달 `setSupportActionBar(binding.toolbar)`</br>
+-onCreate 에 `supportActionBar?.setDisplayShowTitleEnabled(false)` 을 추가하면 툴바에 AppName 속성이 사라짐</br>
+
 
 ```kotlin
 class MainActivity : AppCompatActivity() {
@@ -46,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
     }
 }
 ```
@@ -97,6 +100,9 @@ override fun onOptionsItemSelected(item: MenuItem): Boolean {
 ---
 
 ><a id = "ref">**참고링크**</a></br>
+
+</br>ActionBar(Toolbar) 앱이름 감추기
+</br>https://blog.daum.net/andro_java/726
 
 
 
