@@ -1,7 +1,7 @@
 # AndroidUI_Kotlin
 ___
 
-**Bar**</br>
+**Bars**</br>
 ActionBar / ToolBar / CustomAppBar(CoordinatorLayout / CollapsingToolbarLayout)</br>
 <br></br>
 **DrawerLayout**</br>
@@ -9,8 +9,9 @@ ActionBar / ToolBar / CustomAppBar(CoordinatorLayout / CollapsingToolbarLayout)<
 **ViewPager2**</br>
 ViewPager2_BottomNavigation / ViewPager2_Tab</br>
 <br></br>
-
 **RecyclerView**</br>
+<br></br>
+**Fragment_BottomNavigation**</br>
 <br></br>
 
 ---
