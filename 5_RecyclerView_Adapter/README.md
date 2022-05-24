@@ -1,5 +1,6 @@
-# RecyclerView
+# RecyclerView_Adapter
 
+<img src="https://github.com/HYUNJUNEPARK/ImageRepository/blob/master/androidUI/RecyclerView.png" height="400"/>
 
 ---
 1. <a href = "#content1">ViewHolder</a></br>
