@@ -3,7 +3,6 @@ ___
 
 **1_AppBar**</br>
 ActionBar / ToolBar / CustomAppBar[CoordinatorLayout / CollapsingToolbarLayout]</br>
-<br></br>
 
 **2_DrawerLayout**</br>
 
