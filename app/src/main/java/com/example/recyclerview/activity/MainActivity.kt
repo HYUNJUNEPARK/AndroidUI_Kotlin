@@ -2,8 +2,9 @@ package com.example.recyclerview.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.recyclerview.adapter.MyAdapter
+import com.example.recyclerview.adapter.MyListAdapter
 import com.example.recyclerview.databinding.ActivityMainBinding
 import com.example.recyclerview.model.MyData
 
@@ -18,8 +19,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView() {
-        val adapter = MyAdapter()
-        adapter.dataList = loadData()
+        val adapter = MyListAdapter(itemClickedListener = { myData ->
+            Toast.makeText(this, "${myData.title}", Toast.LENGTH_SHORT).show()
+        })
+        adapter.submitList(loadData())
         binding.recyclerView.adapter = adapter
         val layoutManager = LinearLayoutManager(this)
         binding.recyclerView.layoutManager = layoutManager

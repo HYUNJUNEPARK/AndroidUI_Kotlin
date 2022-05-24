@@ -4,4 +4,4 @@ data class MyData(
     var number: Int,
     var title: String,
     var timestamp: Long
-    )
+)
