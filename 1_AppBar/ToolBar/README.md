@@ -32,6 +32,16 @@
 ```
 
 <br></br>
+-values - themes.xml -> Theme.MaterialComponents.DayNight.NoActionBar 설정</br>
+-NoActionBar 로 변경해주지 않는다면 activity 의 `setSupportActionBar(binding.toolbar)` 과 충돌 발생</br>
+
+```
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Youtube" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+```
+
+<br></br>
 <br></br>
 
 ><a id = "content2">**2. setSupportActionBar(툴바 세팅)**</a></br>
