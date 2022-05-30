@@ -7,10 +7,10 @@ ActionBar / ToolBar / CustomAppBar[CoordinatorLayout / CollapsingToolbarLayout]<
 **2_DrawerLayout**</br>
 
 
-**3_ViewPager2_BottomNavigation**</br>
+**3_ViewPager2_BottomNavigation(DataBinding)**</br>
 
 
-**4_ViewPager2_Tab**</br>
+**4_ViewPager2_Tab(DataBinding)**</br>
 
 
 **5_RecyclerView_Adapter**</br>
