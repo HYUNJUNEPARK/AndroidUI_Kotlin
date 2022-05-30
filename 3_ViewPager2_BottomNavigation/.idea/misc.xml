@@ -11,6 +11,12 @@
         <entry key="..\:/Users/parkhj/AndroidStudioProjects/ViewPager2_BottomNavigation/app/src/main/res/layout/fragment_b.xml" value="0.32037037037037036" />
         <entry key="..\:/Users/parkhj/AndroidStudioProjects/ViewPager2_BottomNavigation/app/src/main/res/layout/fragment_c.xml" value="0.32037037037037036" />
         <entry key="..\:/Users/parkhj/AndroidStudioProjects/ViewPager2_BottomNavigation/app/src/main/res/menu/menu_bottom.xml" value="0.32037037037037036" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/fragment_a.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/fragment_b.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/fragment_c.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/menu/menu_bottom.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/menu/menu_toolbar.xml" value="0.24427083333333333" />
       </map>
     </option>
   </component>

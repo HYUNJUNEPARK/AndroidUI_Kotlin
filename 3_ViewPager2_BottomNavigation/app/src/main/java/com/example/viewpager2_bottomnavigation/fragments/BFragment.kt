@@ -1,22 +1,15 @@
 package com.example.viewpager2_bottomnavigation.fragments
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.example.viewpager2_bottomnavigation.R
+import com.example.viewpager2_bottomnavigation.databinding.FragmentBBinding
+import com.example.viewpager2_bottomnavigation.util.BaseFragment
 
+class BFragment : BaseFragment<FragmentBBinding>(R.layout.fragment_b) {
+    override fun initView() {
+        super.initView()
 
-class BFragment : Fragment() {
+        binding.apply {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_b, container, false)
+        }
     }
-
-
 }

@@ -27,9 +27,11 @@ class MainActivity : AppCompatActivity() {
         initLinkBottomNaviWithViewPager2()
     }
 
+    //viewPager 의 위치에 따라 toolbar 아이콘 visibility 초기화
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.menu_toolbar, menu)
+
         menu?.apply {
             findItem(R.id.toolBarMenu1).isVisible = (binding.viewPager.currentItem == 0)
             findItem(R.id.toolBarMenu2).isVisible = (binding.viewPager.currentItem == 1)
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    //toolbar 아이콘 클릭 이벤트
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.toolBarMenu1 -> Toast.makeText(this, "ToolBar Menu 1", Toast.LENGTH_SHORT).show()
@@ -47,13 +50,13 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-
     private fun initFragment() {
         val fragmentList = listOf(
             AFragment(),
             BFragment(),
             CFragment()
         )
+
         val adapter = FragmentAdapter(this)
         adapter.fragmentList = fragmentList
         binding.viewPager.adapter = adapter
@@ -65,6 +68,7 @@ class MainActivity : AppCompatActivity() {
             getString(R.string.fragment_b),
             getString(R.string.fragment_c)
         )
+
         binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
             when(menuItem.itemId) {
                 R.id.menuA -> {
@@ -91,6 +95,7 @@ class MainActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 invalidateOptionsMenu()
+
                 binding.titleTextView.text = toolBarTitleList[position]
                 binding.bottomNavigation.menu.getItem(position).isChecked = true
             }

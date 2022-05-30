@@ -140,3 +140,6 @@ https://junyoung-developer.tistory.com/153</br>
 
 OnNavigationItemSelectedListener deprecated [JAVA]</br>
 https://stackoverflow.com/questions/68021770/setonnavigationitemselectedlistener-deprecated</br>
+
+DataBinding 을 사용한 BaseFragment 만들기</br>
+https://heeeju4lov.tistory.com/6</br>

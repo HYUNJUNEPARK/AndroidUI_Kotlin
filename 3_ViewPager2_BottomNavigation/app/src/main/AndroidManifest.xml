@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewPager2_BottomNavigation">
+<!--        <activity-->
+<!--            android:name=".util.BaseMenuActivity"-->
+<!--            android:exported="true" />-->
         <activity
             android:name=".activitiy.MainActivity"
             android:exported="true">
