@@ -1,18 +1,15 @@
 package com.example.viewpager2_tab.fragment
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import com.example.viewpager2_tab.R
 import com.example.viewpager2_tab.databinding.FragmentCBinding
+import com.example.viewpager2_tab.util.BaseFragment
 
-class CFragment : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val binding = FragmentCBinding.inflate(inflater, container, false)
+class CFragment : BaseFragment<FragmentCBinding>(R.layout.fragment_c) {
+    override fun initView() {
+        super.initView()
 
-        //TODO init Function at Here
+        binding.apply {
 
-        return binding.root
+        }
     }
 }

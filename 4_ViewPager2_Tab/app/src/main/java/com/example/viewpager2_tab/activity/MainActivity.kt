@@ -22,7 +22,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFragment() {
-        val fragmentList = listOf(AFragment(), BFragment(), CFragment())
+        val fragmentList = listOf(
+            AFragment(),
+            BFragment(),
+            CFragment()
+        )
         val adapter = FragmentAdapter(this)
         adapter.fragmentList = fragmentList
         binding.viewPager.adapter = adapter
