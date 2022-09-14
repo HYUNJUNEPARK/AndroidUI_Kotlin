@@ -1,9 +1,11 @@
-package com.example.recyclerview.activity
+package com.example.recyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.recyclerview.adapter.MyAdapter
+import com.example.recyclerview.adapter.AdapterEx
+import com.example.recyclerview.adapter.ListAdapterEx
 import com.example.recyclerview.databinding.ActivityMainBinding
 import com.example.recyclerview.model.MyData
 
@@ -14,15 +16,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        initRecyclerView()
+        initListAdapterEx()
     }
 
-    private fun initRecyclerView() {
-        val adapter = MyAdapter()
+    private fun initAdapterEx() {
+        val adapter = AdapterEx()
         adapter.dataList = loadData()
         binding.recyclerView.adapter = adapter
-        val layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.layoutManager = layoutManager
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+    }
+
+    private fun initListAdapterEx() {
+        val adapter = ListAdapterEx(
+            itemClickedListener = { myData ->
+                Toast.makeText(this, "${myData.title}", Toast.LENGTH_SHORT).show()
+            }
+        )
+        adapter.submitList(loadData())
+        binding.recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
     }
 
     private fun loadData() : MutableList<MyData> {

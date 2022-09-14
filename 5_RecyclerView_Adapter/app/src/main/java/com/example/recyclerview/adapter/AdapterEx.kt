@@ -8,7 +8,7 @@ import com.example.recyclerview.databinding.ItemMainRecyclerviewBinding
 import com.example.recyclerview.model.MyData
 import java.text.SimpleDateFormat
 
-class MyAdapter : RecyclerView.Adapter<MyAdapter.MyHolder>() {
+class AdapterEx : RecyclerView.Adapter<AdapterEx.MyHolder>() {
     var dataList = mutableListOf<MyData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
